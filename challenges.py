@@ -1,6 +1,6 @@
-def isPangram(string):
-    str = list(string)
-    az = (
+def isPangram(s):
+    str = list(s)
+    az = [
         "a",
         "b",
         "c",
@@ -27,7 +27,7 @@ def isPangram(string):
         "x",
         "y",
         "z",
-    )
+    ]
 
-    result = all(x in str for x in az)
+    result = all(x.lower() in str or x.upper() in str for x in az)
     print(result)
