@@ -31,3 +31,24 @@ def isPangram(s):
 
     result = all(x.lower() in str or x.upper() in str for x in az)
     print(result)
+
+
+def oddOrEvenOneOut(n):
+    odd = []
+    even = []
+
+    numbers = n.split()
+    for x in numbers:
+        if int(x) % 2 == 0:
+            even.append(numbers.index(x))
+        else:
+            odd.append(numbers.index(x))
+
+    oddLen = len(odd)
+
+    if oddLen == 1:
+        print("Odd one is at position {}".format((odd[0] + 1)))
+        return odd[0] + 1
+    else:
+        print("Even one is at position {}".format((even[0] + 1)))
+        return even[0] + 1
