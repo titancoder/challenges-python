@@ -52,3 +52,11 @@ def oddOrEvenOneOut(n):
     else:
         print("Even one is at position {}".format((even[0] + 1)))
         return even[0] + 1
+
+
+def breakIntoPairs(str):
+    stringToOperate = str if len(str) % 2 == 0 else str + "_"
+    arr = []
+    for x in range(0, len(stringToOperate), 2):
+        arr.append(stringToOperate[x : x + 2])
+    print(arr)
