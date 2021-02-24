@@ -60,3 +60,21 @@ def breakIntoPairs(str):
     for x in range(0, len(stringToOperate), 2):
         arr.append(stringToOperate[x : x + 2])
     print(arr)
+
+
+def weirdCase(string):
+    arr = []
+    count = 0
+    for x in list(string):
+        if x == " ":
+            count = 0
+            arr.append(" ")
+        else:
+            if count % 2 == 0:
+                count += 1
+                arr.append(x.upper())
+            else:
+                count += 1
+                arr.append(x.lower())
+    print("".join(arr))
+    return "".join(arr)
